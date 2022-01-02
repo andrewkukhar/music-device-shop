@@ -1,0 +1,26 @@
+[
+    {
+        "id": "sony-yt555",
+        "title": "Sony YT555",
+        "image": "img/featured-sale-new/sony-yt555.jpg",
+        "price": 140.00
+    },
+    {
+        "id": "sony-tt56",
+        "title": "Sony TT56",
+        "image": "img/featured-sale-new/sony-tt56.jpg",
+        "price": 98.00
+    },
+    {
+        "id": "jbl-br-55",
+        "title": "JBL BR-55",
+        "image": "img/featured-sale-new/jbl-br-55.jpg",
+        "price": 110.00
+    },
+    {
+        "id": "jbl-334wn",
+        "title": "JBL 334WN R255",
+        "image": "img/featured-sale-new/jbl-334wn.jpg",
+        "price": 140.00
+    }
+]

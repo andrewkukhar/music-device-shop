@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <title>Music Devices Store</title>
+</head>
+
+<body>
+    <!--  block of Yevhen Melnyk -->
+    <header id="home" class="header">
+        <div class="header_contacts">
+            <nav class="header_top-nav">
+                <div class="header_top-nav-callus">
+                    <span class="header_top-nav-callus_1">
+                        Customer Care: <a href="tel:+12345678900" data-action="phone" class="ui-link">+1 (234) 567 89
+                            00</a>
+                    </span>
+                </div>
+                <div class="header_top-nav-email">
+                    <span class="header_top-nav-email_1">Email:
+                        <a href="mailto:basside@email.com" data-action="email" class="ui-link">basside@email.com</a>
+                    </span>
+                </div>
+            </nav>
+        </div>
+        <section class="header-banner header-banner1">
+            <div class="container_1">
+                <nav class="header_navigation">
+                    <div class=" header_navigation-img">
+                        <img src="img/header/1.svg" alt="Basside">
+                        <div class=" header_navigation-burger"><span></span></div>
+                    </div>
+                    <div class="header_navigation-wrap">
+                        <div class="header_navigation-wrap-pages">
+                            <span class="navigation_wrap"><a href="#"
+                                    class="navigations__speakers navigation__link">Headphones</a></span>
+                            <span class="navigation_wrap"><a href="#"
+                                    class="navigations__news navigation__link">Speakers</a></span>
+                            <span class="navigation_wrap"><a href="#"
+                                    class="navigations__testimonials navigation__link">News</a></span>
+                            <span class="navigation_wrap"><a href="#"
+                                    class="navigations__headphones navigation__link">Testimonials</a></span>
+
+                        </div>
+                        <div class="header_navigation-wrap-icons">
+                            <a href="https://www.facebook.com/" target="blank"><img
+                                    src="img/header/header-icons/facebook_icon.png" alt="Facebook"></a>
+                            <a href="https://www.instagram.com/" target="blank"><img
+                                    src="img/header/header-icons/instagram_icon.png" alt="Instagram"></a>
+                            <a href="https://twitter.com/" target="blank"><img
+                                    src="img/header/header-icons/twitter_icon.png" alt="Twitter"></a>
+                            <a href="https://www.youtube.com/" target="blank"><img
+                                    src="img/header/header-icons/youtube_icon.png" alt="Youtube"></a>
+                        </div>
+                    </div>
+                </nav>
+                <div class="header_bg">
+                    <div class="bg_text">
+                        <h5>Great Sound at Low Prices</h5>
+                        <p>Headphones and loudspeakers from the best brands</p>
+                    </div>
+                    <div class="bg_links">
+                        <a href="" class="bg_links_about">About us</a>
+                        <a href="" class="bg_links_shop"><span>Shop now</span></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </header>
+    <!-- modal Cart AK block start -->
+    <div id="cart-icon" class="cart-icon">
+        <a href="#popup-cart" class="cart__link">
+            <img src="img/speakers-slider/icons-shopping-bag.png" alt="shopping-bag">
+            <span id="cart-badge" class="cart-badge badge"></span>
+        </a>
+    </div>
+    <div id="popup-cart" class="popup-cart">
+        <a class="popup__body-body" href="#header"></a>
+        <div class="popup-body container">
+            <div class="popup-content">
+                <div class="popup-header">
+                    <a href="#header" class="popup-close">X</a>
+                    <div class="popup-title">
+                        <h2>Shopping cart</h2>
+                    </div>
+                </div>
+                <div class="popup__product"></div>
+                <div class="popup-form">
+                    <form action="https://formspree.io/f/mlezdjvk" method="POST" id="cart-form" class="cart-form__body">
+                        <input id="client-name" type="name" name="name" placeholder="Name" required>
+                        <input id="client-email" type="email" name="email" placeholder="Email" required>
+                        <button id="cart-form-button" class="cart-form__button order">ORDER</button>
+                        <p id="cart-form-status"></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- modal Cart AK block end -->
+    <div class="wrapper">
+        <main class="main">
+            <!-- block of Andrii Kukhar start -->
+            <div class="container">
+                <div class="main-advantages">
+                    <div class="main-advantages__item">
+                        <div class="main-advantages__icon">
+                            <img src="img/main-adventages/icons8-shiping-32.png" alt="">
+                        </div>
+                        <div class="main-advantages__text">
+                            <h4>Free Shipping</h4>
+                            <p>For all orders over $100</p>
+                        </div>
+                    </div>
+                    <div class="main-advantages__item">
+                        <div class="main-advantages__icon">
+                            <img src="img/main-adventages/icons8-get-cash-50.png" alt="">
+                        </div>
+                        <div class="main-advantages__text">
+                            <h4>Money Back</h4>
+                            <p>30-days guarantee</p>
+                        </div>
+                    </div>
+                    <div class="main-advantages__item">
+                        <div class="main-advantages__icon">
+                            <img src="img/main-adventages/icons8-online-support-64.png" alt="">
+                        </div>
+                        <div class="main-advantages__text">
+                            <h4>24/7 Support</h4>
+                            <p>We work round the clock</p>
+                        </div>
+                    </div>
+                    <div class="main-advantages__item">
+                        <div class="main-advantages__icon">
+                            <img src="img/main-adventages/icons8-delivery-box-50.png" alt="">
+                        </div>
+                        <div class="main-advantages__text">
+                            <h4>Fast Delivery</h4>
+                            <p>In 2-4 business days</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="featured-sale-new" class="featured-sale-new">
+                <div class="fsn__tabs-nav">
+                    <a class="tab__link" data-tab="#fsn-featured">Featured</a>
+                    <a class="tab__link" data-tab="#fsn-sale">Sale</a>
+                    <a class="tab__link" data-tab="#fsn-new">New</a>
+                </div>
+                <div id="fsn-featured" class="fsn-tabs__item fsn-featured">
+                    <div class="featured__items"></div>
+                </div>
+                <div id="fsn-sale" class="fsn-tabs__item fsn-sale">
+                    <div class="sale__items"></div>
+                </div>
+                <div id="fsn-new" class="fsn-tabs__item fsn-new">
+                    <div class="new__items"></div>
+                </div>
+            </div>
+            <div class="jbl-speakers">
+                <div class="jbl-speakers__left">
+                    <h2>JBL Speakers</h2>
+                    <div class="speakers-prices">
+                        <small>$300.00</small><strong>$250.00</strong>
+                    </div>
+                    <p>
+                        Special price on a variety of JBL loudspeakers.
+                    </p>
+                    <div class="speakers-links">
+                        <a href="#speakers">LEARN MORE</a>
+                        <div class="speakers-links__line"></div>
+                    </div>
+                </div>
+                <div class="jbl-speakers__right">
+                    <p>SPECIAL OFFER</p>
+                    <h3>Headphones Sale</h3>
+                    <div class="speakers-links__right">
+                        <a href="#speakers">LEARN MORE</a>
+                        <div class="speakers-links__right__line"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="mindblowing-sound">
+                <div class="mindblowing-sound__empty-block"></div>
+                <div class="mindblowing-sound__body">
+                    <div class="mindblowing-sound__content">
+                        <h3>Mindblowing Sound in Our Store</h3>
+                        <img src="img/mindblowing-sound/voice-sound-blue.svg" alt="voice-sound-mindblowing">
+                        <p class="ms__p-strong">
+                            Discover the world of high-quality sound and enjoy your
+                            favorite tracks with Basside online store.
+                        </p>
+                        <p class="ms__p-small">
+                            Basside knows everything about the riffs, percussions,
+                            and baselines. We will help you choose the best headphones
+                            and speakers to hear the thinnest tones that have always been there.
+                        </p>
+                        <div class="mindblowing-sound__advantage">
+                            <div class="mindblowing-sound__advantage-item">
+                                <div class="mindblowing-sound__advantage-icons">
+                                    <i class="fa fa-headset"></i>
+                                </div>
+                                <div class="mindblowing-sound__advantage-text">
+                                    <h4>All Kinds of Headphones</h4>
+                                    <p>
+                                        We sell headphones by famous brands (from Sennheiser
+                                        to Bang & Olufsen), including models for gaming.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="mindblowing-sound__advantage-item">
+                                <div class="mindblowing-sound__advantage-icons">
+                                    <i class="fa fa-volume-up"></i>
+                                </div>
+                                <div class="mindblowing-sound__advantage-text">
+                                    <h4>Top Loudspeakers</h4>
+                                    <p>
+                                        Enjoy your favorite music everywhere — outdoors,
+                                        in the office, at home, and at parties.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="mindblowing-sound__advantage-item">
+                                <div class="mindblowing-sound__advantage-icons">
+                                    <i class="fab fa-bluetooth-b"></i>
+                                </div>
+                                <div class="mindblowing-sound__advantage-text">
+                                    <h4>Wireless Connection</h4>
+                                    <p>
+                                        We offer many wireless models of
+                                        headphones and loudspeakers for your comfort.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- block of Andrii Kukhar end -->
+            <!-- block of Oleksandr Krutikov -->
+            <div class="div_music_colomb">
+                <div class="div_text">
+                    <div class="h2_jbl_speaker">
+                        <h2>JBL Speaker</h2>
+                    </div>
+                    <div>
+                        <p class="bold_title"><b>Model</b></p>
+                        <p class="normal_text">JBL HY-F2234</p>
+                        <p class="bold_title"><b>Details</b></p>
+                        <p class="normal_text">This wireless model delivers a bass-heavy sound. You can enjoy
+                            <br>your favorite songs whenever you are, thanks to powerful
+                            <br>radiators and full-range speakers. JBL will take your music
+                            <br>listening experience to the next level.
+                        </p>
+                    </div>
+                    <div class="price">
+                        <p class="bold_title"><b>Price</b> <b class="price_large">$356</b></p>
+                    </div>
+                    <div class="buttons">
+                        <button class="button_buy_now">
+                            <strong>BUY NOW</strong>
+                        </button>
+                        <button class="button_more_models">
+                            <strong>MORE MODELS</strong>
+                        </button>
+                    </div>
+                </div>
+                <div class="img_music-colomb">
+                    <img src=" img/music-colomb/music-column.jpg" alt="music-colomb">
+                </div>
+            </div>
+            <!-- block of Andrii Kukhar start -->
+            <div class="special-offer-best-seller">
+                <div class="sobs__item best-seller">
+                    <p>BEST SELLER</p>
+                    <h3>Meze T45</h3>
+                    <div class="sobs__prices">
+                        <small>$357.00</small><strong>$320.00</strong>
+                    </div>
+                    <div class="sobs__item-links">
+                        <a href="#headphones-page">SHOP NOW</a>
+                        <div class="sobs__item-links-line"></div>
+                    </div>
+                </div>
+                <div class="sobs__item special-offer">
+                    <p>SPECIAL OFFER</p>
+                    <h3>Sony S890</h3>
+                    <div class="sobs__prices">
+                        <small>$327.00</small><strong>$259.00</strong>
+                    </div>
+                    <div class="sobs__item-links">
+                        <a href="#headphones-page">SHOP NOW</a>
+                        <div class="sobs__item-links-line"></div>
+                    </div>
+                </div>
+                <div class="sobs__item hurry-up">
+                    <p>HURRY UP</p>
+                    <h3>Sony S2</h3>
+                    <div class="sobs__prices">
+                        <small>$427.00</small><strong>$200.00</strong>
+                    </div>
+                    <div class="sobs__item-links">
+                        <a href="#speakers">SHOP NOW</a>
+                        <div class="sobs__item-links-line"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- block of Andrii Kukhar end -->
+            <!-- block of Mukola Mazurov start -->
+            <div id="headphones-page" class="main__headphones">
+                <h2 class="h2">Headphones</h2>
+                <img class="headphones-logo" src="img/headphones/logo-headphones.svg" alt="Headphones logo">
+                <p class="p">Shop your favorite headphones or contact us for help with the choice.</p>
+                <div class="main-headphones-carousel">
+                    <button class="main-headphones-carousel__button back">
+                        < </button>
+                            <div class="main-headphones-carousel__slide"></div>
+                            <button class="main-headphones-carousel__button forward"> > </button>
+                </div>
+                <div class="headphones-all-cards"></div>
+            </div>
+            <!-- block of Mukola Mazurov end -->
+            <!-- block of Halyna Kunta -->
+            <div class="first-blue-scroll-part">
+                <div>
+                    <img class="headphones-of-scroll-part" width="370" height="377" src="img/headphones/r255.webp"
+                        alt="AirPulse R255">
+                </div>
+                <div class="text-of-scrollpart">
+                    <div>
+                        <h2 class="title-first-blue-scroll-part">Always Clear Sound <br>
+                            Wherever You Are
+                        </h2>
+                        <div class="content-of-subtitle">
+                            <h3 class="subtitle-scroll-part"> Model</h3>
+                            <p> <span class="little-grey-text"> AirPulse R255</span></p>
+                        </div>
+                        <div class="content-of-subtitle">
+                            <h3 class="subtitle-scroll-part">Details</h3>
+                            <p> <span class="little-grey-text"> 15 hours of wireless playback and award-winning clear
+                                    sound
+                                    by
+                                    AirPulse.
+                                    These headphones are your perfect choice for work, travels, or just everyday use
+                                    wherever
+                                    you
+                                    go.</span>
+                            </p>
+                        </div>
+                        <div class="content-of-subtitle">
+                            <h3 class="price-scroll-part">Price <span class="price-of-scroll-part">$185</span></h3>
+                        </div>
+                    </div>
+                    <div class="buttons-of-scroll-part">
+                        <div>
+                            <form action="#featured-sale-new">
+                                <button class="button-buy-now-blue-scroll-part style-button-scrol-part"><strong> BUY
+                                        NOW</strong></button>
+                            </form>
+                        </div>
+                        <div>
+                            <form action="#headphones-page">
+                                <button class="button-all-headphones-blue-scroll-part style-button-scrol-part"><strong>
+                                        ALL
+                                        HEADPHONES</strong></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="second-yellow-scroll-part">
+                <div>
+                    <img class="headphones-of-scroll-part" width="370" height="377" src="img/headphones/S890.webp"
+                        alt="Sony S890">
+                </div>
+                <div class="text-of-scrollpart">
+                    <div>
+                        <h2 class="title-second-yellow-scroll-part">Colorize Your Day <br>
+                            With Favorite Tracks</h2>
+                        <div class="content-of-subtitle">
+                            <h3 class="subtitle-scroll-part">Model</h3>
+                            <p> <span class="little-grey-text"> Sony S890 </span></p>
+                        </div>
+                        <div class="content-of-subtitle">
+                            <h3 class="subtitle-scroll-part">Details</h3>
+                            <p> <span class="little-grey-text"> These ergonomic and colorful wireless headphones will be
+                                    to
+                                    the
+                                    liking of all sound lovers.
+                                    The headphones feature powerful bass and full immersion into your favorite music on
+                                    the
+                                    go.
+                                </span> </p>
+                        </div>
+                        <div class="content-of-subtitle">
+                            <h3 class="price-scroll-part">Price <span class="price-scroll-yellow-part">$259</span></h3>
+                        </div>
+                    </div>
+                    <div class="buttons-of-scroll-part">
+                        <div>
+                            <form action="#featured-sale-new">
+                                <button class="button-buy-now-yellow-scroll-part style-button-scrol-part"><b> BUY
+                                        NOW</b></button>
+                            </form>
+                        </div>
+                        <div>
+                            <form action="#headphones-page">
+                                <button
+                                    class="button-all-headphones-yellow-scroll-part style-button-scrol-part-blue"><b>
+                                        HEADPHONES</b></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="third-black-scroll-part">
+                <div>
+                    <img class="headphones-of-scroll-part" width="370" height="377" src="img/headphones/JY-F112.webp"
+                        alt="Bang & Olufsen JY-F112">
+                </div>
+                <div class="text-of-scrollpart">
+                    <div>
+                        <h2 class="title-third-black-scroll-part">Premium Wireless <br>
+                            Headphones</h2>
+                        <div class="content-of-subtitle">
+                            <h3 class="subtitle-scroll-part">Model</h3>
+                            <p> <span class="little-grey-text"> Bang & Olufsen JY-F112 </span></p>
+                        </div>
+                        <div class="content-of-subtitle">
+                            <h3 class="subtitle-scroll-part">Details</h3>
+                            <p> <span class="little-grey-text">Headphones from one of the best manufacturers of audio
+                                    equipment with leather inserts.Enjoy up to 14 hours of wireless playback and the
+                                    premium
+                                    design of these headphonesbby Bang & Olufsen.</span>
+                            </p>
+                        </div>
+                        <div class="content-of-subtitle">
+                            <h3 class="price-scroll-part">Price <span class="price-of-scroll-part">$749</span></h3>
+                        </div>
+                    </div>
+                    <div class="buttons-of-scroll-part">
+                        <div>
+                            <form action="#featured-sale-new">
+                                <button class="button-buy-now-black-scroll-part style-button-scrol-part"><b> BUY NOW
+                                    </b></button>
+                            </form>
+                        </div>
+                        <div>
+                            <form action="#headphones-page">
+                                <button class="button-all-headphones-black-scroll-part style-button-scrol-part"><b> ALL
+                                        HEADPHONES </b></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- block of Andrii Kukhar start -->
+            <div id="speakers" class="speakers-slider-block">
+                <h2>Speakers</h2>
+                <img src="img/our-customers-and-slider/voice-sound-blue.svg" alt="">
+                <p>
+                    Take your music with you wherever
+                    you go and enjoy the high-quality sound.
+                </p>
+                <div class="flex">
+                    <div class="flex__column">
+                        <div class="speakers-slider"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="hours-of-music">
+                <div class="hours-of-music__text">
+                    <h2>14 Hours of Music</h2>
+                    <p>
+                        Enjoy freedom movement with wireless headphones.
+                    </p>
+                    <i class="fas fa-play"></i><span>PLAY VIDEO</span>
+                </div>
+            </div>
+            <div class="slider-brands-block">
+                <div class="flex">
+                    <div class="flex__column">
+                        <div class="slider-brands">
+                            <div class="slider-brands__item">
+                                <img src="img/slider-brands/apple-logo.png" alt="apple-logo">
+                            </div>
+                            <div class="slider-brands__item">
+                                <img src="img/slider-brands/sony-logo.png" alt="sony-logo">
+                            </div>
+                            <div class="slider-brands__item">
+                                <img src="img/slider-brands/marshall-logo.png" alt="marshall-logo">
+                            </div>
+                            <div class="slider-brands__item">
+                                <img src="img/slider-brands/sennheiser-logo.png" alt="sennheiser-logo">
+                            </div>
+                            <div class="slider-brands__item">
+                                <img src="img/slider-brands/panasonic.png" alt="panasonic-logo">
+                            </div>
+                            <div class="slider-brands__item">
+                                <img src="img/slider-brands/samsung-logo.jpg" alt="samsung-logo">
+                            </div>
+                            <div class="slider-brands__item">
+                                <img src="img/slider-brands/jbl-2-logo.png" alt="jbl-logo">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="our-customers">
+                <div class="our-customers__body">
+                    <div class="header-our-customers">
+                        <h2>Our Customers Say</h2>
+                        <img src="img/our-customers-and-slider/voice-sound.svg" alt="voice-sound">
+                        <p>We're so excited to receive great testimonials from our customers!</p>
+                    </div>
+                    <!-- slider -->
+                    <div class="flex">
+                        <div class="flex__column">
+                            <div class="slider"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- block of Andrii Kukhar end -->
+            <!-- block of Mukola Moskalenko -->
+            <div class="popular_articles">
+                <h1 style="margin:auto;text-align:center">Popular Articles</h1>
+                <div class="airvawes"></div>
+                <h2 style="margin:auto;text-align:center">Want to learn more about the world of audio gadgets?
+                    Follow
+                    our blog posts!</h2>
+                <div class="cont">
+                    <div class="speaker_cont">
+                        <img src="img/pop__articles/speaker.png" alt="speaker" width="400">
+                        <h3>Speakers</h3>
+                        <h1>How to Choose a Speaker for Office?</h1>
+                        <p>
+                            Want to enjoy cool background music in your office? We will help you choose the right
+                            speakers.
+                        </p>
+                        <a href="#" class="a__pa">learn more</a>
+                        <img src="img/pop__articles/fr4.svg" alt="line" width="25">
+
+                    </div>
+                    <div class="headphones-cont">
+                        <img src="img/pop__articles/girl.png" alt="girl" width="400">
+                        <h3>Headphones</h3>
+                        <h1>Top 5 New Headphones</h1>
+                        <p>
+                            Spring 2021 has brought a lot of new products from top wireless headphone manufacturers.
+                        </p>
+                        <a href="#" class="a__pa">learn more</a>
+                        <img src="img/pop__articles/fr4.svg" alt="line" width="25">
+
+                    </div>
+                    <div class="loudspeakers-cont">
+                        <img src="img/pop__articles/loud-speaker.png" alt="loudSpeakers" width="400">
+                        <h3>Speakers</h3>
+                        <h1>Home Usage of Loudspeakers</h1>
+                        <p>
+                            A speaker for home should be inexpensive, durable, and with added features, right?
+                        </p>
+                        <a href="#" class="a__pa">learn more</a>
+                        <img src="img/pop__articles/fr4.svg" alt="line" width="25">
+                        <!-- Mukola Moskalenko -->
+                    </div>
+                </div>
+            </div>
+            <!-- Mukola Moskalenko end -->
+        </main>
+        <!-- block of Andrii Kukhar start -->
+        <footer class="footer">
+            <div class="footer__body">
+                <div class="hot-offers">
+                    <div class="hot-offers__body">
+                        <div class="hot-offers__title">
+                            <h2>Check Out Our Hot Offers</h2>
+                        </div>
+                        <div class="hot-offers__text">
+                            <p>Join our summer sale with special prices
+                                on Bose, Sennheiser, Sony, Bang & Olufsen,
+                                and other brands.
+                            </p>
+                        </div>
+                        <div class="hot-offers__button">
+                            <a class="button-learn-more" href="">LEARN MORE</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__black-block">
+                    <div class="contacts-form__body">
+                        <div class="logo-subscribe">
+                            <div class="logo-subscribe__logo">
+                                <img src="img/footer/logo-basside.svg" alt="logo-basside">
+                            </div>
+                            <div class="logo-subscribe__subscribe">
+                                <p>
+                                    Shop the best headphones and loudspeakers from
+                                    top brands at low prices in our online store.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="contacts-form__contacts">
+                            <div class="contacts__number">
+                                <span>CONTACT US</span>
+                                <a href="tel:+12345678900">+1 (234) 567 89 00</a>
+                            </div>
+                            <div class="contacts__mail">
+                                <span>WRITE US</span>
+                                <a href="mailto:basside@email.com">basside@email.com</a>
+                            </div>
+                        </div>
+                        <div class="contacts-form__form">
+                            <form action="https://formspree.io/f/mrgjbbdb" method="POST" id="subcribe-form"
+                                class="form__body">
+                                <input id="email" type="email" name="email" placeholder="Email" required>
+                                <button id="subcribe-form-button" class="form__button">SUBSCRIBE</button>
+                                <p id="subcribe-form-status"></p>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="footer__links">
+                        <div class="links__body">
+                            <h4 class="links__title">Products</h4>
+                            <div class="links__line"></div>
+                            <nav class="links__nav-list">
+                                <ul class="nav-list__body">
+                                    <li class="nav-list__item"><a href="#">Headphones</a></li>
+                                    <li class="nav-list__item"><a href="#">Smart Watches</a></li>
+                                    <li class="nav-list__item"><a href="#">Speakers</a></li>
+                                    <li class="nav-list__item"><a href="#">Sale</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="links__body">
+                            <h4 class="links__title">Navigation</h4>
+                            <div class="links__line"></div>
+                            <nav class="links__nav-list">
+                                <ul class="nav-list__body">
+                                    <li class="nav-list__item"><a href="#">About Us</a></li>
+                                    <li class="nav-list__item"><a href="#">FAQ</a></li>
+                                    <li class="nav-list__item"><a href="#">News</a></li>
+                                    <li class="nav-list__item"><a href="#">Contacts</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="links__body">
+                            <h4 class="links__title">Quicklinks</h4>
+                            <div class="links__line"></div>
+                            <nav class="links__nav-list">
+                                <ul class="nav-list__body">
+                                    <li class="nav-list__item"><a href="#">View Orders</a></li>
+                                    <li class="nav-list__item"><a href="#">Tracking Order</a></li>
+                                    <li class="nav-list__item"><a href="#">My Account</a></li>
+                                    <li class="nav-list__item"><a href="#">Join Our Team</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="links__body">
+                            <h4 class="links__title">Customer Care</h4>
+                            <div class="links__line"></div>
+                            <nav class="links__nav-list">
+                                <ul class="nav-list__body">
+                                    <li class="nav-list__item"><a href="#">Privacy Policy</a></li>
+                                    <li class="nav-list__item"><a href="#">Terms & Conditions</a></li>
+                                    <li class="nav-list__item"><a href="#">Returns</a></li>
+                                    <li class="nav-list__item"><a href="#">Shipping Info</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="links__body">
+                            <h4 class="links__title">Socials</h4>
+                            <div class="links__line"></div>
+                            <nav class="links__nav-list">
+                                <ul class="nav-list__body">
+                                    <li class="nav-list__item"><a href="#">Instagram</a></li>
+                                    <li class="nav-list__item"><a href="#">Facebook</a></li>
+                                    <li class="nav-list__item"><a href="#">Twitter</a></li>
+                                    <li class="nav-list__item"><a href="#">Youtube</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="footer__underline">
+                        <div class="underline__left-text">
+                            <div class="footer__underline-text">© Created by</div>
+                        </div>
+                        <div class="underline__right-text">
+                            <div class="footer__underline-text">All rights Reserved</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <div class="scrollup">
+            <i class="fa fa-chevron-up"></i>
+        </div>
+        <!-- block of Andrii Kukhar end -->
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/products-service.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/product-speakers.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/fsn-featured-items.js"></script>
+    <script src="js/fsn-sale-items.js"></script>
+    <script src="js/fsn-new-items.js"></script>
+    <script src="js/fsn-tabs-items.js"></script>
+    <script src="js/sliders-brands.js"></script>
+    <script src="js/our-customers.js"></script>
+    <script src="js/main-headphones.js"></script>
+    <script src="js/main-headphones-carousel.js"></script>
+    <script src="js/subscribe-form.js"></script>
+    <script src="js/burger-menu.js"></script>
+    <script src="js/scroll-up.js"></script>
+
+</body>
+
+</html>

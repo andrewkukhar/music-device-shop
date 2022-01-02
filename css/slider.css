@@ -1,0 +1,115 @@
+.slick-list {
+    overflow: hidden;
+}
+.slick-track {
+    display: flex;
+    align-items: flex-start;
+}
+.slider .slick-dots {
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+.slider .slick-dots li {
+    list-style: none;
+    margin: 0 10px;
+}
+.slider .slick-dots button {
+    font-size: 0;
+    width: 7px;
+    height: 7px;
+    background-color: rgb(95, 95, 95);
+    border-radius: 50%;
+}
+.slider .slick-dots li.slick-active button {
+    background-color: transparent;
+    border: 1px solid rgb(104, 104, 104);
+}
+.flex {
+    min-width: 0;
+    width: 100%;
+    display: flex;
+}
+.flex__column {
+    width: 100%;
+    min-width: 0;
+}
+.slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    margin-top: 10px;
+    min-width: 0;
+    position: relative;
+}
+.slider__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    padding: 5px 60px;
+}
+.slider__item img {
+    width: 75px;
+    height: auto;
+    border-radius: 50%;
+    object-fit: cover;
+}
+@media (min-width: 768px) {
+    .slider__item img {
+        width: 125px;
+    }   
+}
+.slider__item h3 {
+    padding: 10px 20px;
+    font-size: 22px;
+    font-weight: 800;
+    color: rgb(40, 119, 182);
+}
+.slider__item p {
+    width: 100%;
+    font-size: 16px;
+    line-height: 25px;
+    font-weight: 400;
+    color: rgb(126, 126, 126);
+    max-width: 750px;
+}
+.slider__item span {
+    padding: 20px;
+    font-size: 14px;
+    font-weight: 700;
+    color: rgb(235, 81, 18);
+}
+.slider .slick-arrow {
+    position: absolute;
+    top: 50%;
+    margin: -20px 0 0 0;
+    z-index: 10;
+    font-size: 0;
+    width: 25px;
+    border-radius: 50%;
+    background-color: rgba(40, 118, 182, 0.466);
+    height: 25px;
+}
+.slider .slick-arrow.slick-prev {
+    left: 2.5%;
+    background: url("../img/our-customers-and-slider/icons-left-64.png") 0 0 / 100% no-repeat;
+}
+.slider .slick-arrow.slick-next {
+    right: 2.5%;
+    background: url("../img/our-customers-and-slider/icons-right-64.png") 0 0 / 100% no-repeat;
+}
+@media (min-width: 1200px) {
+    .slider .slick-arrow.slick-prev {
+        left: 3%;
+        background: url("../img/our-customers-and-slider/left-icon.png") 0 0 / 100% no-repeat;
+    }
+    .slider .slick-arrow.slick-next {
+        right: 3%;
+        background: url("../img/our-customers-and-slider/right-icon.png") 0 0 / 100% no-repeat;
+    }
+}

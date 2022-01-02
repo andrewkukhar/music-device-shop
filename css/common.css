@@ -1,0 +1,45 @@
+img {
+    max-width: 100%;
+    height: auto;
+}
+*,
+*:before,
+*:after {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+html,
+body {
+    max-width: 100%;
+    box-sizing: border-box;
+    font-family: "Lato", sans-serif;
+    overflow-x: hidden;
+}
+
+body._lock {
+    overflow: hidden;
+}
+
+.wrapper {
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.main {
+    width: 100%;
+}
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.d-none {
+    display: none;
+}

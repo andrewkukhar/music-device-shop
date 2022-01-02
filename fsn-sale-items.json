@@ -1,0 +1,26 @@
+[
+    {
+        "id": "marshall-dr67",
+        "title": "Marshall DR-67",
+        "image": "img/featured-sale-new/marshall-dr67.jpg",
+        "price": 459.00
+    },
+    {
+        "id": "v-moda-er65",
+        "title": "V-MODA ER65",
+        "image": "img/featured-sale-new/v-moda-er65.jpg",
+        "price": 80.00
+    },
+    {
+        "id": "bose-g656-a",
+        "title": "Bose G656-A",
+        "image": "img/featured-sale-new/bose-g656-a.jpg",
+        "price": 65.00
+    },
+    {
+        "id": "airpulse-r255",
+        "title": "AirPulse R255",
+        "image": "img/featured-sale-new/airpulse-r255.jpg",
+        "price": 185.00
+    }
+]

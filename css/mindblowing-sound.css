@@ -1,0 +1,127 @@
+.mindblowing-sound {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.mindblowing-sound__empty-block {
+    flex: 0 1 15%;
+    padding: 500px 400px 0 400px;
+    background: url(../img/mindblowing-sound/60c225afcc781f0021a4d1b7_optimized_1159_c1115x1165-16x0.webp) 10% 10% /
+    cover no-repeat;
+}
+.mindblowing-sound__body {
+    background-color: rgb(243, 243, 243);
+    flex: 0 1 75%;
+}
+.mindblowing-sound__content {
+    width: 100%;
+    max-width: 768px;
+    padding: 100px 10px 100px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.mindblowing-sound__content img {
+    width: 65px;
+    padding: 20px;
+}
+.mindblowing-sound__content h3 {
+    font-size: 38px;
+    font-weight: 900;
+    padding: 10px 10px;
+}
+.ms__p-strong {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: 0.5px;
+    color: rgb(56, 56, 56);
+    padding: 15px 0 15px 15px;
+}
+.ms__p-small {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 23px;
+    letter-spacing: 0.5px;
+    color: rgb(136, 136, 136);
+    padding: 15px 0 15px 15px;
+}
+.mindblowing-sound__advantage {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.mindblowing-sound__advantage-item {
+    margin: 5px 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: start;
+}
+.mindblowing-sound__advantage-icons {
+    padding: 5px 0 5px 0;
+}
+.mindblowing-sound__advantage-icons i {
+    width: auto;
+    color: coral;
+    font-size: 24px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    padding: 14px;
+}
+.mindblowing-sound__advantage-text {
+    padding: 10px;
+}
+.mindblowing-sound__advantage-text h4 {
+    font-size: 24px;
+    font-weight: 600;
+    padding: 5px;
+}
+.mindblowing-sound__advantage-text p {
+    font-size: 17px;
+    font-weight: 400;
+    color: rgb(56, 56, 56);
+    padding: 5px;
+}
+@media (min-width: 1198px) {
+    .mindblowing-sound {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    .mindblowing-sound__empty-block {
+        flex: 0 1 44%;
+        padding: 482px 100px;
+        background: url(../img/mindblowing-sound/60c225afcc781f0021a4d1b7_optimized_1159_c1115x1165-16x0.webp) 10% 10% /
+        cover no-repeat;
+    }
+    .mindblowing-sound__body {
+        flex: 0 1 60%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .mindblowing-sound__content {
+        width: 100%;
+        max-width: 500px;
+        padding: 100px 50px 100px 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    .mindblowing-sound__content h3 {
+        font-size: 52px;
+        font-weight: 900;
+        padding: 10px 10px;
+    }
+}

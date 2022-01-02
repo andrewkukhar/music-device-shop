@@ -1,0 +1,382 @@
+.footer {
+    width: 100%;
+    color: #fff;
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+}
+.hot-offers {
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background: #2670ac;
+    padding: 20px 10px;
+}
+.hot-offers__body {
+    max-width: 1250px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.hot-offers__title {
+    min-width: 200px;
+    width: 100%;
+    flex: 0 2 35%;
+    margin: 10px 0;
+}
+.hot-offers__title h2 {
+    font-size: 34px;
+    font-weight: 550;
+}
+.hot-offers__text {
+    min-width: 200px;
+    width: 100%;
+    flex: 0 1 35%;
+    margin: 10px 0;
+}
+.hot-offers__text p {
+    font-size: 14px;
+    font-weight: 250;
+}
+.hot-offers__button {
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    max-width: 120px;
+    max-height: 80px;
+    background-color: rgb(242, 203, 31);
+    flex: 0 1 20%;
+    text-align: center;
+    margin: 10px 0 10px 10px;
+}
+.hot-offers__button:hover {
+    transition: all ease 0.8s 0s;
+    background-color: #fff;
+}
+.hot-offers__button a {
+    font-size: 13px;
+    color: #000;
+    text-decoration: none;
+    padding: 20px 30px;
+}
+@media (max-width: 562px) {
+    .hot-offers {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #2877b6;
+        padding: 20px 5px;
+    }
+    .hot-offers__body {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .hot-offers__title {
+        max-width: 350px;
+        width: 100%;
+        font-size: 20px;
+        flex: 0 2 40%;
+        margin: 10px 0;
+    }
+    .hot-offers__text {
+        max-width: 350px;
+        width: 100%;
+        font-size: 12px;
+        flex: 0 1 35%;
+        margin: 10px 0;
+    }
+    .hot-offers__button {
+        max-width: 350px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        max-width: 100px;
+        max-height: 60px;
+        background-color: rgb(255, 228, 110);
+        flex: 0 1 20%;
+        text-align: center;
+        margin: 10px 0;
+    }
+}
+.footer__black-block {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(36, 36, 36);
+
+}
+.contacts-form__body {
+    max-width: 1250px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(36, 36, 36);
+    padding: 10px 0;
+}
+.logo-subscribe {
+    max-width: 300px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 0 1 30%;
+    margin: 30px 0;
+    padding: 5px 5px;
+}
+.logo-subscribe__logo img {
+    padding: 10px 10px;
+}
+.logo-subscribe__subscribe p {
+    color: rgb(206, 206, 206);
+    font-size: 14px;
+    font-weight: 100;
+    padding: 10px 10px;
+}
+.contacts-form__contacts {
+    max-width: 300px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 0 1 30%;
+    margin: 30px 0;
+}
+.contacts-form__contacts span {
+    font-size: 12px;
+    color: rgb(241, 217, 105);
+    padding: 5px;
+}
+.contacts-form__contacts a {
+    text-decoration: none;
+    color: rgb(231, 231, 231);
+    font-size: 28px;
+    font-weight: 600;
+    padding: 20px 10px;
+}
+.contacts-form__contacts a:hover {
+    text-decoration: underline;
+    transition: all ease 0.8s 0s;
+}
+.contacts__number {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 5px 5px;
+}
+.contacts__mail {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 5px 5px;
+}
+.contacts-form__form {
+    max-width: 300px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 0 1 30%;
+    margin: 30px 0;
+}
+.form__body button {
+    max-width: 100%;
+    font-size: 12px;
+    font-weight: 200;
+    letter-spacing: 1px;
+    width: 270px;
+    color: #fff;
+    background-color: #2670ac;
+    padding: 20px 30px;
+    margin: 10px 20px;
+}
+.form__body button:hover {
+    transition: all ease 1.2s 0s;
+    background-color: #fff;
+    color: #000;
+}
+.form__body input {
+    font-size: 12px;
+    max-width: 56%;
+    width: 270px;
+    color: #fff;
+    background-color: rgb(48, 48, 48);
+    padding: 20px 30px;
+    margin: 10px 20px;
+}
+.logo-subscribe__logo img {
+    width: 50%;
+}
+@media (max-width: 562px) {
+    .contacts-form__body {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .logo-subscribe {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .contacts-form__contacts {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .contacts__number {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .contacts__mail {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .contacts-form__form {
+        max-width: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 30px 0;
+    }
+    .form__body button {
+        max-width: 75%;
+        width: 100%;
+        padding: 20px 30px;
+        margin: 10px 0;
+    }
+    .form__body input {
+        width: 100%;
+        padding: 20px 30px;
+        margin: 10px 0;
+    }
+}
+.footer__links {
+    width: 100%;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    background-color: rgb(36, 36, 36);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 30px 20px;
+}
+.links__body {
+    width: 100%;
+    max-width: 180px;
+    flex: 1 1 20%;
+    margin: 5px 5px;
+}
+.footer__links h4 {
+    padding: 20px 10px;
+    font-size: 22px;
+    font-weight: 500;
+    list-style: none;
+    color: rgb(240, 240, 240);
+}
+.footer__links li {
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 200;
+    list-style: none;
+    color: rgb(197, 197, 197);
+}
+.footer__links a {
+    padding: 10px 0;
+    text-decoration: none;
+    color: rgb(213, 213, 213);
+}
+.footer__links a:hover {
+    color: #fff;
+    text-decoration: underline;
+    transition: all ease 0.8s 0s;
+}
+.links__line {
+    margin: 0 10px;
+    height: 3px;
+    width: 15%;
+    background-color: rgb(242, 203, 31);
+}
+@media (max-width: 562px) {
+    .footer__links {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: nowrap;
+        padding: 30px 0;
+    }
+    .links__body {
+        width: 100%;
+        max-width: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 5px 5px;
+    }
+    .nav-list__body {
+        padding-top: 10px;
+    }
+}
+.footer__underline {
+    max-width: 1250px;
+    width: 100%;
+    background-color: rgb(36, 36, 36);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+.footer__underline-text {
+    font-size: 12px;
+    font-weight: 100;
+    letter-spacing: 1px;
+    padding: 0px 20px;
+}

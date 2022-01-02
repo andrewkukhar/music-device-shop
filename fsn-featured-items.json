@@ -1,0 +1,26 @@
+[
+    {
+        "id": "jbl-rr-56",
+        "title": "JBL RR-56",
+        "image": "img/featured-sale-new/jbl-rr-56.jpg",
+        "price": 110.00
+    },
+    {
+        "id": "sennheiser-sn-67",
+        "title": "Sennheiser SN-67",
+        "image": "img/featured-sale-new/sennheiser-sn-67.jpg",
+        "price": 213.00
+    },
+    {
+        "id": "jbl-gt-345",
+        "title": "JBL GT-345",
+        "image": "img/featured-sale-new/jbl-gt-345.jpg",
+        "price": 120.00
+    },
+    {
+        "id": "sony-s890",
+        "title": "Sony S890",
+        "image": "img/featured-sale-new/sony-s890.jpg",
+        "price": 259.00
+    }
+]
