@@ -67,12 +67,12 @@
     text-decoration: none;
     padding: 20px 30px;
 }
-@media (max-width: 562px) {
+@media (max-width: 762px) {
     .hot-offers {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
+        align-items: baseline;
         background: #2877b6;
         padding: 20px 5px;
     }
@@ -221,7 +221,6 @@
 }
 .form__body input {
     font-size: 12px;
-    max-width: 56%;
     width: 270px;
     color: #fff;
     background-color: rgb(48, 48, 48);
@@ -229,9 +228,9 @@
     margin: 10px 20px;
 }
 .logo-subscribe__logo img {
-    width: 50%;
+    width: 150px;
 }
-@media (max-width: 562px) {
+@media (max-width: 762px) {
     .contacts-form__body {
         width: 100%;
         display: flex;
@@ -282,7 +281,6 @@
         margin: 30px 0;
     }
     .form__body button {
-        max-width: 75%;
         width: 100%;
         padding: 20px 30px;
         margin: 10px 0;
@@ -341,7 +339,7 @@
     width: 15%;
     background-color: rgb(242, 203, 31);
 }
-@media (max-width: 562px) {
+@media (max-width: 762px) {
     .footer__links {
         display: flex;
         flex-direction: column;
@@ -362,6 +360,14 @@
     }
     .nav-list__body {
         padding-top: 10px;
+    }
+}
+@media (max-width: 362px) {
+    .footer__links,
+    .nav-list__body,
+    links__body {
+        padding: 0;
+        margin: 0;
     }
 }
 .footer__underline {
