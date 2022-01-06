@@ -7,6 +7,7 @@
 }
 .mindblowing-sound__empty-block {
     flex: 0 1 15%;
+    width: 100%;
     padding: 500px 400px 0 400px;
     background: url(../img/mindblowing-sound/60c225afcc781f0021a4d1b7_optimized_1159_c1115x1165-16x0.webp) 10% 10% /
     cover no-repeat;
@@ -14,18 +15,23 @@
 .mindblowing-sound__body {
     background-color: rgb(243, 243, 243);
     flex: 0 1 75%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .mindblowing-sound__content {
     width: 100%;
     max-width: 768px;
-    padding: 100px 10px 100px 20px;
+    padding: 100px 10px 100px 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
 }
 .mindblowing-sound__content img {
-    width: 65px;
+    width: 85px;
     padding: 20px;
 }
 .mindblowing-sound__content h3 {
@@ -99,6 +105,7 @@
     }
     .mindblowing-sound__empty-block {
         flex: 0 1 44%;
+        height: 1000px;
         padding: 482px 100px;
         background: url(../img/mindblowing-sound/60c225afcc781f0021a4d1b7_optimized_1159_c1115x1165-16x0.webp) 10% 10% /
         cover no-repeat;
@@ -106,6 +113,7 @@
     .mindblowing-sound__body {
         flex: 0 1 60%;
         width: 100%;
+        height: 1000px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -123,5 +131,16 @@
         font-size: 52px;
         font-weight: 900;
         padding: 10px 10px;
+    }
+    mindblowing-sound__content img {
+        width: 115px;
+        padding: 20px; 
+    }
+}
+@media (max-width: 352px) {
+    .mindblowing-sound__body, 
+    .mindblowing-sound__content {
+        padding: 0;
+        margin: 0;
     }
 }

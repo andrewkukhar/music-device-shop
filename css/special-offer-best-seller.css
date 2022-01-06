@@ -4,7 +4,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 0 30px;
 }
 .sobs__item {
     width: 100%;
@@ -114,5 +113,24 @@
     }
     .hurry-up {
         flex: 0 1 33.34%;
+    }
+}
+@media (max-width: 555px) {
+    .sobs__item,
+    .best-seller,
+    .special-offer,
+    .hurry-up {
+        padding: 5px;
+        margin: 5px;
+    }
+}
+@media (max-width: 352px) {
+    .special-offer-best-seller,
+    .sobs__item,
+    .best-seller,
+    .special-offer,
+    .hurry-up {
+        padding: 0;
+        margin: 0;
     }
 }

@@ -291,6 +291,14 @@
         margin: 10px 0;
     }
 }
+@media (max-width: 362px) {
+    .contacts-form__form,
+    .form__body button,
+    .form__body input {
+        padding: 20px 20px;
+        margin: 5px 0;
+    }
+}
 .footer__links {
     width: 100%;
     border-top: 1px solid #fff;
@@ -365,7 +373,7 @@
 @media (max-width: 362px) {
     .footer__links,
     .nav-list__body,
-    links__body {
+    .links__body {
         padding: 0;
         margin: 0;
     }
