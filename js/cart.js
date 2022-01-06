@@ -11,8 +11,8 @@ class Cart {
       .querySelector('.cart__link')
       .addEventListener('click', () => this.renderCart());
     this.cartContainer
-      .querySelector('.order')
-      .addEventListener('click', ev => this.order(ev));
+    // .querySelector('.order')
+    // .addEventListener('click', ev => this.order(ev));
   }
   saveCart() {
     localStorage['cart'] = JSON.stringify(this.cart);
@@ -30,11 +30,11 @@ class Cart {
       const product = await this.productService.getProductById(id);
       total += product.price * this.cart[id];
       cartDomSting += `
-        <div class="product__list" data-id="${id}">
-        <div class="list__item">${product.model}</div>
-        <div class="list__item">$${product.price}</div>
+        <div id="productId" class="product__list" data-id="${id}">
+        <div id="productModel" class="list__item">${product.model}</div>
+        <div id="productPrice" class="list__item">$${product.price}</div>
         <div class="list__item-quantity">
-        <div class="list__quantity">${this.cart[id]}</div>
+        <div id="productQuantity" class="list__quantity">${this.cart[id]}</div>
         <div class="list__buttom"><button data-id=${id} class="plus">+</button></div>
         <div class="list__buttom"><button data-id=${id} class="minus">-</button></div>
         </div>
@@ -44,7 +44,7 @@ class Cart {
     cartDomSting += `
         <div class="product__total-sum">
         <div class=""><strong>TOTAL</strong></div>
-        <div class=""><strong>$${total.toFixed(2)}</strong></div>
+        <div id="totalSum" class=""><strong>$${total.toFixed(2)}</strong></div>
         </div>`;
     this.cartContainer.querySelector(
       '.popup__product'
@@ -108,43 +108,43 @@ class Cart {
       count, cost
     };
   }
-  async order(ev) {
-    if ((await this.cartLengthAndCost()).count === 0) {
-      window.showAlert('Please choose products to order', false);
-      return;
-    }
-    const form = this.cartContainer.querySelector('.cart-form__body');
-    if (form.checkValidity()) {
-      ev.preventDefault();
-      fetch('order', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          clientName: document.querySelector('#client-name').value,
-          clientEmail: document.querySelector('#client-email').value,
-          cart: this.cart
-        })
-      })
-        .then(response => {
-          if (response.status === 200) {
-            return response.text();
-          } else {
-            throw new Error('Cannot send form');
-          }
-        })
-        .then(responseText => {
-          form.reset();
-          this.cart = {};
-          this.saveCart();
-          this.updateBadge();
-          this.renderCart();
-          window.showAlert('Thank you! ' + responseText);
-        })
-        .catch(error => showAlert('There is an error: ' + error, false));
-    } else {
-      window.showAlert('Please fill form correctly', false);
-    }
-  }
+  // async order(ev) {
+  //   if ((await this.cartLengthAndCost()).count === 0) {
+  //     window.showAlert('Please choose products to order', false);
+  //     return;
+  //   }
+  //   const form = this.cartContainer.querySelector('.cart-form__body');
+  //   if (form.checkValidity()) {
+  //     ev.preventDefault();
+  //     fetch('order', {
+  //       method: 'POST',
+  //       headers: {
+  //         'Content-Type': 'application/json'
+  //       },
+  //       body: JSON.stringify({
+  //         clientName: document.querySelector('#client-name').value,
+  //         clientEmail: document.querySelector('#client-email').value,
+  //         cart: this.cart
+  //       })
+  //     })
+  //       .then(response => {
+  //         if (response.status === 200) {
+  //           return response.text();
+  //         } else {
+  //           throw new Error('Cannot send form');
+  //         }
+  //       })
+  //       .then(responseText => {
+  //         form.reset();
+  //         this.cart = {};
+  //         this.saveCart();
+  //         this.updateBadge();
+  //         this.renderCart();
+  //         window.showAlert('Thank you! ' + responseText);
+  //       })
+  //       .catch(error => showAlert('There is an error: ' + error, false));
+  //   } else {
+  //     window.showAlert('Please fill form correctly', false);
+  //   }
+  // }
 }

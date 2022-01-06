@@ -175,7 +175,11 @@
     align-items: center;
     padding: 10px 0;
 }
-.product__list button {
+.product__list > button {
+    cursor: pointer;
+    width: 12.5px;
+    padding: 10px;
+    font-size: 16px;
     cursor: pointer;
 }
 .product__total-sum {
@@ -240,7 +244,7 @@
     letter-spacing: 2px;
     padding: 5px;
 }
-.cart-form__body button {
+.cart-form__button {
     width: 125px;
     padding: 10px;
     font-size: 16px;
