@@ -1,17 +1,17 @@
-.header_contacts {
+.header__contacts {
     max-width: 100%;
     display: none;
     padding: 0 25px;
     background-color: #2a2a2a;
 }
-.header_top-nav-callus {
+.header__top-nav-callus {
     letter-spacing: 1.3px;
     font-weight: 700;
     font-size: 0.75rem;
     padding: 15px 0;
     margin: 15px 0;
 }
-.header_top-nav-email {
+.header__top-nav-email {
     letter-spacing: 1.3px;
     font-weight: 700;
     font-size: 0.75rem;
@@ -19,11 +19,10 @@
     margin: 15px 0;
     text-align: right;
 }
-
-.header_top-nav-callus_1 {
+.header__top-nav-callus-1 {
     color: white;
 }
-.header_top-nav-email_1 {
+.header__top-nav-email-1 {
     color: white;
 }
 .ui-link {
@@ -33,11 +32,11 @@
 .ui-link:hover {
     text-decoration: underline;
 }
-@media (min-width: 990px) {
-    .header_contacts {
+@media (min-width: 769px) {
+    .header__contacts {
         display: block;
     }
-    .header_top-nav {
+    .header__top-nav {
         display: grid;
         grid-template-columns: auto 1fr auto;
         grid-template-rows: 1fr;
@@ -46,12 +45,12 @@
     }
 }
 @media (min-width: 1020px) {
-    .header_top-nav {
+    .header__top-nav {
         max-width: 1115px;
     }
 }
 @media (min-width: 1275px) {
-    .header_top-nav {
+    .header__top-nav {
         min-width: 1115px;
         max-width: 60%;
     }
