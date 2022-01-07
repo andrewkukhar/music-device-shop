@@ -11,8 +11,8 @@ class Cart {
       .querySelector('.cart__link')
       .addEventListener('click', () => this.renderCart());
     this.cartContainer
-    // .querySelector('.order')
-    // .addEventListener('click', ev => this.order(ev));
+      .querySelector('.order')
+      .addEventListener('click', e => this.order(ev));
   }
   saveCart() {
     localStorage['cart'] = JSON.stringify(this.cart);
@@ -108,43 +108,43 @@ class Cart {
       count, cost
     };
   }
-  // async order(ev) {
-  //   if ((await this.cartLengthAndCost()).count === 0) {
-  //     window.showAlert('Please choose products to order', false);
-  //     return;
-  //   }
-  //   const form = this.cartContainer.querySelector('.cart-form__body');
-  //   if (form.checkValidity()) {
-  //     ev.preventDefault();
-  //     fetch('order', {
-  //       method: 'POST',
-  //       headers: {
-  //         'Content-Type': 'application/json'
-  //       },
-  //       body: JSON.stringify({
-  //         clientName: document.querySelector('#client-name').value,
-  //         clientEmail: document.querySelector('#client-email').value,
-  //         cart: this.cart
-  //       })
-  //     })
-  //       .then(response => {
-  //         if (response.status === 200) {
-  //           return response.text();
-  //         } else {
-  //           throw new Error('Cannot send form');
-  //         }
-  //       })
-  //       .then(responseText => {
-  //         form.reset();
-  //         this.cart = {};
-  //         this.saveCart();
-  //         this.updateBadge();
-  //         this.renderCart();
-  //         window.showAlert('Thank you! ' + responseText);
-  //       })
-  //       .catch(error => showAlert('There is an error: ' + error, false));
-  //   } else {
-  //     window.showAlert('Please fill form correctly', false);
-  //   }
-  // }
+  async order(ev) {
+    if ((await this.cartLengthAndCost()).count === 0) {
+      alert('Please choose products to order', false);
+      return;
+    }
+    const form = this.cartContainer.querySelector('.cart-form__body');
+    if (form.checkValidity()) {
+      ev.preventDefault();
+      fetch('send.php', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          name: document.querySelector('#name').value,
+          email: document.querySelector('#email').value,
+          cart: this.cart
+        })
+      })
+        .then(response => {
+          if (response.status === 200) {
+            return response.text();
+          } else {
+            throw new Error('Cannot send form');
+          }
+        })
+        .then(responseText => {
+          form.reset();
+          this.cart = {};
+          this.saveCart();
+          this.updateBadge();
+          this.renderCart();
+          alert(`Thank you! ${responseText}`);
+        })
+        .catch(error => alert(`There is an error: ${error}`, false));
+    } else {
+      alert('Please fill form correctly', false);
+    }
+  }
 }

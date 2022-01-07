@@ -4,21 +4,13 @@ $token = "2104924397:AAGnPRV8mK89V7PLOMaZpouHuUlppHl0-n8";
 $chat_id = "-686161989";
 // "chat":{"id":-686161989
 if ($_POST['act'] == 'order') {
-    $clientName = ($_POST['clientName']);
-    $clientEmail = ($_POST['clientEmail']);
-    $productId = ($_POST['productId']);
-    $productModel = ($_POST['productModel']);
-    $productPrice = ($_POST['productPrice']);
-    $productQuantity = ($_POST['productQuantity']);
-    $totalSum = ($_POST['totalSum']);
+    $name = ($_POST['name']);
+    $email = ($_POST['email']);
+    $cart = ($_POST['cart']);
     $arr = array(
-        'Name:' => $clientName,
-        'Email:' => $clientEmail,
-        'Id:' => $productId,
-        'Model:' => $productModel,
-        'Price:' => $productPrice,
-        'Quantity:' => $productQuantity,
-        'Total Sum:' => $totalSum
+        'Name:' => $name,
+        'Email:' => $email,
+        'My Order:' => $cart,
     );
     foreach($arr as $key => $value) {
         $txt .= "<b>".$key."</b> ".$value."%0A";
