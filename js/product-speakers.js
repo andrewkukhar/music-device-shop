@@ -76,5 +76,6 @@ class ProductList {
         const button = event.target;
         const id = button.dataset.id;
         this.cart.addProduct(id);
+        //$.POST('send.php', {'cart': cartForSend});
     }
 };

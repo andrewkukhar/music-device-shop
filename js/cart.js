@@ -12,7 +12,7 @@ class Cart {
       .addEventListener('click', () => this.renderCart());
     this.cartContainer
       .querySelector('.order')
-      .addEventListener('click', e => this.order(ev));
+      .addEventListener('click', ev => this.order(ev));
   }
   saveCart() {
     localStorage['cart'] = JSON.stringify(this.cart);
@@ -140,7 +140,7 @@ class Cart {
           this.saveCart();
           this.updateBadge();
           this.renderCart();
-          alert(`Thank you! ${responseText}`);
+          alert('Thank you! ' + responseText);
         })
         .catch(error => alert(`There is an error: ${error}`, false));
     } else {
