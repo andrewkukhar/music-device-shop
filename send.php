@@ -10,7 +10,6 @@ if ($_POST['act'] == 'order') {
     $productPrice = ($_POST['productPrice']);
     $productQuantity = ($_POST['productQuantity']);
     $totalSum = ($_POST['totalSum']);
-
     $arr = array(
         'Name:' => $name,
         'Email:' => $email,
