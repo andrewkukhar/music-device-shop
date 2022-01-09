@@ -32,7 +32,7 @@ class Cart {
       cartDomSting += `
         <div class="product__list" data-id="${id}">
         <div class="list__item">${product.model}
-        <input type="hidden" id="productOrder" name="productModel" value="${localStorage.getItem('cart')}">
+        <input id="${id}" type="hidden" name="productModel" value="${product.model}, ${product.price}, ${this.cart[id]}">
         </div>
         <div class="list__item">$${product.price}</div>
         <div class="list__item-quantity">
@@ -110,44 +110,44 @@ class Cart {
       count, cost
     };
   }
-  async order(ev) {
-    if ((await this.cartLengthAndCost()).count === 0) {
-      alert('Please choose products to order', false);
-      return;
-    }
-    const form = this.cartContainer.querySelector('.cart-form__body');
-    if (form.checkValidity()) {
-      ev.preventDefault();
-      fetch('send.php', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          name: document.querySelector('#name').value,
-          email: document.querySelector('#email').value,
-          productOrder: document.querySelector('#productOrder').value,
-          cart: this.cart
-        })
-      })
-        .then(response => {
-          if (response.status === 200) {
-            return response.text();
-          } else {
-            throw new Error('Cannot send form');
-          }
-        })
-        .then(responseText => {
-          form.reset();
-          this.cart = {};
-          this.saveCart();
-          this.updateBadge();
-          this.renderCart();
-          alert('Thank you! ' + responseText);
-        })
-        .catch(error => alert(`There is an error: ${error}`, false));
-    } else {
-      alert('Please fill form correctly', false);
-    }
-  }
+  // async order(ev) {
+  //   if ((await this.cartLengthAndCost()).count === 0) {
+  //     alert('Please choose products to order', false);
+  //     return;
+  //   }
+  //   const form = this.cartContainer.querySelector('.cart-form__body');
+  //   if (form.checkValidity()) {
+  //     ev.preventDefault();
+  //     fetch('send.php', {
+  //       method: 'POST',
+  //       headers: {
+  //         'Content-Type': 'application/json'
+  //       },
+  //       body: JSON.stringify({
+  //         name: document.querySelector('#name').value,
+  //         email: document.querySelector('#email').value,
+  //         productOrder: document.querySelector('#productOrder').value
+  //       })
+  //     })
+  //       // .then(response => {
+  //       //   if (response.status === 200) {
+  //       //     return response.text();
+  //       //   } else {
+  //       //     throw new Error('Cannot send form');
+  //       //   }
+  //       // })
+  //       .then(responseText => {
+  //         form.reset();
+  //         this.cart = {};
+  //         this.saveCart();
+  //         this.updateBadge();
+  //         this.renderCart();
+  //         alert('Thank you! For You Order. ' + responseText);
+  //         this.cartContainer.querySelector('.popup-close').click();
+  //       })
+  //       .catch(error => alert(`There is an error: ${error}`, false));
+  //   } else {
+  //     alert('Please fill form correctly', false);
+  //   }
+  // }
 }
