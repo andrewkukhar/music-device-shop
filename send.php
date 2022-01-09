@@ -6,11 +6,18 @@ $chat_id = "-686161989";
 if ($_POST['act'] == 'order') {
     $name = ($_POST['name']);
     $email = ($_POST['email']);
-    $cart = ($_POST['cart']);
+    $productModel = ($_POST['productModel']);
+    $productPrice = ($_POST['productPrice']);
+    $productQuantity = ($_POST['productQuantity']);
+    $totalSum = ($_POST['totalSum']);
+
     $arr = array(
         'Name:' => $name,
         'Email:' => $email,
-        'My Order:' => $cart,
+        'Model:' => $productModel,
+        'Price:' => $productPrice,
+        'Quantity:' => $productQuantity,
+        'Total Sum:' => $totalSum,
     );
     foreach($arr as $key => $value) {
         $txt .= "<b>".$key."</b> ".$value."%0A";

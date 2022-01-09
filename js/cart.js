@@ -30,11 +30,17 @@ class Cart {
       const product = await this.productService.getProductById(id);
       total += product.price * this.cart[id];
       cartDomSting += `
-        <div id="productId" class="product__list" data-id="${id}">
-        <div id="productModel" class="list__item">${product.model}</div>
-        <div id="productPrice" class="list__item">$${product.price}</div>
+        <div class="product__list" data-id="${id}">
+        <div class="list__item">${product.model}
+        <input type="hidden" id="productModel" name="productModel" value="${product.model}">
+        </div>
+        <div class="list__item">$${product.price}
+        <input type="hidden" id="productPrice" name="productPrice" value="${product.price}">
+        </div>
         <div class="list__item-quantity">
-        <div id="productQuantity" class="list__quantity">${this.cart[id]}</div>
+        <div class="list__quantity">${this.cart[id]}
+        <input type="hidden" id="productQuantity" name="productQuantity" value="${this.cart[id]}">
+        </div>
         <div class="list__buttom"><button data-id=${id} class="plus">+</button></div>
         <div class="list__buttom"><button data-id=${id} class="minus">-</button></div>
         </div>
@@ -44,7 +50,9 @@ class Cart {
     cartDomSting += `
         <div class="product__total-sum">
         <div class=""><strong>TOTAL</strong></div>
-        <div id="totalSum" class=""><strong>$${total.toFixed(2)}</strong></div>
+        <div class=""><strong>$${total.toFixed(2)}</strong>
+        <input type="hidden" id="totalSum" name="totalSum" value="${total.toFixed(2)}">
+        </div>
         </div>`;
     this.cartContainer.querySelector(
       '.popup__product'
@@ -124,6 +132,10 @@ class Cart {
         body: JSON.stringify({
           name: document.querySelector('#name').value,
           email: document.querySelector('#email').value,
+          productModel: document.querySelector('#productModel').value,
+          productPrice: document.querySelector('#productPrice').value,
+          productQuantity: document.querySelector('#productQuantity').value,
+          totalSum: document.querySelector('#totalSum').value,
           cart: this.cart
         })
       })
