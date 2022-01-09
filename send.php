@@ -6,21 +6,16 @@ $chat_id = "-686161989";
 if ($_POST['act'] == 'order') {
     $name = ($_POST['name']);
     $email = ($_POST['email']);
-    $productModel = ($_POST['productModel']);
-    $productPrice = ($_POST['productPrice']);
-    $productQuantity = ($_POST['productQuantity']);
-    $totalSum = ($_POST['totalSum']);
+    $productOrder = ($_POST['productOrder']);
     $arr = array(
         'Name:' => $name,
         'Email:' => $email,
-        'Model:' => $productModel,
-        'Price:' => $productPrice,
-        'Quantity:' => $productQuantity,
-        'Total Sum:' => $totalSum,
+        'My order:' => $productOrder
     );
     foreach($arr as $key => $value) {
         $txt .= "<b>".$key."</b> ".$value."%0A";
     };
+    $to = "andrey.rise@gmail.com";
     $sendToTelegram = fopen("https://api.telegram.org/bot{$token}/sendMessage?chat_id={$chat_id}&parse_mode=html&text={$txt}","r");
     if ($sendToTelegram) {
         echo "Thank You! You order received. Coming soon call back you.";

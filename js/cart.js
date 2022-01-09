@@ -32,15 +32,11 @@ class Cart {
       cartDomSting += `
         <div class="product__list" data-id="${id}">
         <div class="list__item">${product.model}
-        <input type="hidden" id="productModel" name="productModel" value="${product.model}">
+        <input type="hidden" id="productOrder" name="productModel" value="${localStorage.getItem('cart')}">
         </div>
-        <div class="list__item">$${product.price}
-        <input type="hidden" id="productPrice" name="productPrice" value="${product.price}">
-        </div>
+        <div class="list__item">$${product.price}</div>
         <div class="list__item-quantity">
-        <div class="list__quantity">${this.cart[id]}
-        <input type="hidden" id="productQuantity" name="productQuantity" value="${this.cart[id]}">
-        </div>
+        <div class="list__quantity">${this.cart[id]}</div>
         <div class="list__buttom"><button data-id=${id} class="plus">+</button></div>
         <div class="list__buttom"><button data-id=${id} class="minus">-</button></div>
         </div>
@@ -50,9 +46,7 @@ class Cart {
     cartDomSting += `
         <div class="product__total-sum">
         <div class=""><strong>TOTAL</strong></div>
-        <div class=""><strong>$${total.toFixed(2)}</strong>
-        <input type="hidden" id="totalSum" name="totalSum" value="${total.toFixed(2)}">
-        </div>
+        <div class=""><strong>$${total.toFixed(2)}</strong></div>
         </div>`;
     this.cartContainer.querySelector(
       '.popup__product'
@@ -132,10 +126,7 @@ class Cart {
         body: JSON.stringify({
           name: document.querySelector('#name').value,
           email: document.querySelector('#email').value,
-          productModel: document.querySelector('#productModel').value,
-          productPrice: document.querySelector('#productPrice').value,
-          productQuantity: document.querySelector('#productQuantity').value,
-          totalSum: document.querySelector('#totalSum').value,
+          productOrder: document.querySelector('#productOrder').value,
           cart: this.cart
         })
       })
