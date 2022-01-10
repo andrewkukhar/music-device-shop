@@ -1,5 +1,6 @@
 <?php
 // bot id 456027644
+print_r($_REQUEST);
 $token = "2104924397:AAGnPRV8mK89V7PLOMaZpouHuUlppHl0-n8";
 $chat_id = "-686161989";
 // "chat":{"id":-686161989
@@ -7,12 +8,14 @@ if ($_POST['act'] == 'order') {
     $name = ($_POST['name']);
     $email = ($_POST['email']);
     $productOrder = ($_POST['productOrder']);
-    $productCart = ($_POST['productCart']);
+    $productCart = ($_POST['cartSend']);
+    $quantity = ($_POST['quantity']);
     $arr = array(
         'Name:' => $name,
         'Email:' => $email,
         'My order:' => $productOrder,
-        'My cart:' => $productCart
+        'My order:' => $productCart,
+        'Total Sum:' => $quantity
     );
     foreach($arr as $key => $value) {
         $txt .= "<b>".$key."</b> ".$value."%0A";

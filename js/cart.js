@@ -11,8 +11,8 @@ class Cart {
       .querySelector('.cart__link')
       .addEventListener('click', () => this.renderCart());
     this.cartContainer
-    // .querySelector('.order')
-    //.addEventListener('click', ev => this.order(ev));
+      .querySelector('.order')
+      .addEventListener('click', ev => this.order(ev));
   }
   saveCart() {
     localStorage['cart'] = JSON.stringify(this.cart);
@@ -31,10 +31,7 @@ class Cart {
       total += product.price * this.cart[id];
       cartDomSting += `
         <div class="product__list" data-id="${id}">
-        <div class="list__item">${product.model}
-        <input id="productOrder" type="hidden" name="productOrder" value="${JSON.stringify(this.cart)}">
-        <input id="productCart" type="hidden" name="productCart" value="${localStorage['cart']}">
-        </div>
+        <div class="list__item">${product.model}</div>
         <div class="list__item">$${product.price}</div>
         <div class="list__item-quantity">
         <div class="list__quantity">${this.cart[id]}</div>
@@ -44,9 +41,13 @@ class Cart {
         </div>
         `;
     }
+    const cartSend = JSON.stringify(this.cart);
     cartDomSting += `
         <div class="product__total-sum">
         <div class=""><strong>TOTAL</strong></div>
+        <input id="productOrder" type="hidden" defaultValue="${localStorage['cart']}">
+        <input id="productCart" type="hidden" value="${cartSend}">
+        <input id="quantity" type="hidden" value="${total.toFixed(2)}">
         <div class=""><strong>$${total.toFixed(2)}</strong></div>
         </div>`;
     this.cartContainer.querySelector(
@@ -111,44 +112,37 @@ class Cart {
       count, cost
     };
   }
-  // async order(ev) {
-  //   if ((await this.cartLengthAndCost()).count === 0) {
-  //     alert('Please choose products to order', false);
-  //     return;
-  //   }
-  //   const form = this.cartContainer.querySelector('.cart-form__body');
-  //   if (form.checkValidity()) {
-  //     ev.preventDefault();
-  //     fetch('send.php', {
-  //       method: 'POST',
-  //       headers: {
-  //         'Content-Type': 'application/json'
-  //       },
-  //       body: JSON.stringify({
-  //         name: document.querySelector('#name').value,
-  //         email: document.querySelector('#email').value,
-  //         productOrder: document.querySelector('#productOrder').value
-  //       })
-  //     })
-  //       // .then(response => {
-  //       //   if (response.status === 200) {
-  //       //     return response.text();
-  //       //   } else {
-  //       //     throw new Error('Cannot send form');
-  //       //   }
-  //       // })
-  //       .then(responseText => {
-  //         form.reset();
-  //         this.cart = {};
-  //         this.saveCart();
-  //         this.updateBadge();
-  //         this.renderCart();
-  //         alert('Thank you! For You Order. ' + responseText);
-  //         this.cartContainer.querySelector('.popup-close').click();
-  //       })
-  //       .catch(error => alert(`There is an error: ${error}`, false));
-  //   } else {
-  //     alert('Please fill form correctly', false);
-  //   }
-  // }
+  async order(ev) {
+    if ((await this.cartLengthAndCost()).count === 0) {
+      alert('Please choose products to order', false);
+      return;
+    }
+    const form = this.cartContainer.querySelector('.cart-form__body');
+    if (form.checkValidity()) {
+      ev.preventDefault();
+      await fetch('sendmail.php', {
+        method: 'POST',
+        body: new FormData(form)
+      })
+        .then(response => {
+          if (response.status === 200) {
+            return response.text();
+          } else {
+            throw new Error('Cannot send form');
+          }
+        })
+        .then(responseText => {
+          form.reset();
+          this.cart = {};
+          this.saveCart();
+          this.updateBadge();
+          this.renderCart();
+          alert('Thank you! For You Order. ' + responseText);
+          this.cartContainer.querySelector('.popup-close').click();
+        })
+        .catch(error => alert(`There is an error: ${error}`, false));
+    } else {
+      alert('Please fill form correctly', false);
+    }
+  }
 }
