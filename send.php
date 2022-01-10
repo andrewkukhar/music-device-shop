@@ -6,11 +6,13 @@ $chat_id = "-686161989";
 if ($_POST['act'] == 'order') {
     $name = ($_POST['name']);
     $email = ($_POST['email']);
-    $productId = ($_POST['id']);
+    $productOrder = ($_POST['productOrder']);
+    $productCart = ($_POST['productCart']);
     $arr = array(
         'Name:' => $name,
         'Email:' => $email,
-        'My order:' => $productId
+        'My order:' => $productOrder,
+        'My cart:' => $productCart
     );
     foreach($arr as $key => $value) {
         $txt .= "<b>".$key."</b> ".$value."%0A";

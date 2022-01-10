@@ -11,8 +11,8 @@ class Cart {
       .querySelector('.cart__link')
       .addEventListener('click', () => this.renderCart());
     this.cartContainer
-      .querySelector('.order')
-      .addEventListener('click', ev => this.order(ev));
+    // .querySelector('.order')
+    //.addEventListener('click', ev => this.order(ev));
   }
   saveCart() {
     localStorage['cart'] = JSON.stringify(this.cart);
@@ -32,7 +32,8 @@ class Cart {
       cartDomSting += `
         <div class="product__list" data-id="${id}">
         <div class="list__item">${product.model}
-        <input id="${id}" type="hidden" name="productModel" value="${product.model}, ${product.price}, ${this.cart[id]}">
+        <input id="productOrder" type="hidden" name="productOrder" value="${JSON.stringify(this.cart)}">
+        <input id="productCart" type="hidden" name="productCart" value="${localStorage['cart']}">
         </div>
         <div class="list__item">$${product.price}</div>
         <div class="list__item-quantity">
