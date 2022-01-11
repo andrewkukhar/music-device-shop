@@ -117,12 +117,22 @@ class Cart {
       alert('Please choose products to order', false);
       return;
     }
+    (function () {
+      let carts = localStorage.getItem('cart');
+      console.log(carts);
+      $.POST('sendmail.php', { 'carts': carts }, function (alData) {
+        alert('Thanks');
+      })
+      
+    })();
     const form = this.cartContainer.querySelector('.cart-form__body');
     if (form.checkValidity()) {
       ev.preventDefault();
+      let formData = new FormData(form)
+      formData.append()
       await fetch('sendmail.php', {
         method: 'POST',
-        body: new FormData(form)
+        body: formData
       })
         .then(response => {
           if (response.status === 200) {

@@ -21,11 +21,11 @@
 	if(trim(!empty($_POST['email']))){
 		$body.='<p><strong>E-mail:</strong> '.$_POST['email'].'</p>';
 	}
-	if(trim(!empty($_POST['productOrder']))){
-		$body.='<p><strong>Order:</strong> '.json_decode($_POST['productOrder']).'</p>';
+	if(trim(!empty($_POST['carts']))){
+		$body.='<p><strong>Order:</strong> '.$_POST['carts'].'</p>';
 	}
 	if(trim(!empty($_POST['productCart']))){
-		$body.='<p><strong>Cart:</strong> '.json_decode($_POST['productCart']).'</p>';
+		$body.='<p><strong>Cart:</strong> '.$_POST['productCart'].'</p>';
 	}
 	
 	$mail->Body = $body;

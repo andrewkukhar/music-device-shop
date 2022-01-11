@@ -171,9 +171,9 @@
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    padding: 10px 0;
+    padding: 10px 30px;
 }
 .cart-form__button {
     cursor: pointer;
@@ -183,6 +183,7 @@
     cursor: pointer;
 }
 .product__total-sum {
+    border-top: 0.5px solid #000;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -205,8 +206,20 @@
     padding-right: 5px;
 }
 .list__buttom {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
     padding: 0 5px;
     flex: 0 1 25%;
+}
+.plus,
+.minus {
+    border-radius: 50%;
+    width: 20px;
+    font-size: 15px;
+    height: 20px;
+    background-color: #f2aa45;
 }
 @media (min-width: 768px) {
     .product__list {
