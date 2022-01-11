@@ -89,13 +89,13 @@
                         <h2>Shopping cart</h2>
                     </div>
                 </div>
-                <form action="#" id="cart-form" name="cartForm" class="cart-form__body">
+                <form action="send.php" method="POST" id="cart-form" name="cartForm" class="cart-form__body">
                     <div class="popup__product"></div>
                     <input id="name" class="popup__product-input" type="text" name="name" placeholder="Name" required>
                     <input id="email" class="popup__product-input" type="text" name="email" placeholder="Email"
                         required>
                     <input type="submit" id="cart-form-button" class="cart-form__button order" value="ORDER">
-                    <!-- <input type="hidden" name="act" value="order"> -->
+                    <input type="hidden" name="act" value="order">
                 </form>
             </div>
         </div>

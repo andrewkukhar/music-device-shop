@@ -11,8 +11,8 @@ class Cart {
       .querySelector('.cart__link')
       .addEventListener('click', () => this.renderCart());
     this.cartContainer
-      .querySelector('.order')
-      .addEventListener('click', ev => this.order(ev));
+    //.querySelector('.order')
+    //.addEventListener('click', ev => this.order(ev));
   }
   saveCart() {
     localStorage['cart'] = JSON.stringify(this.cart);
@@ -47,7 +47,7 @@ class Cart {
         <div class=""><strong>TOTAL</strong></div>
         <input id="productOrder" type="hidden" defaultValue="${localStorage['cart']}">
         <input id="productCart" type="hidden" value="${cartSend}">
-        <input id="quantity" type="hidden" value="${total.toFixed(2)}">
+        <input id="quantity" type="hidden" value="${total.toFixed(2)}">      
         <div class=""><strong>$${total.toFixed(2)}</strong></div>
         </div>`;
     this.cartContainer.querySelector(
@@ -112,47 +112,37 @@ class Cart {
       count, cost
     };
   }
-  async order(ev) {
-    if ((await this.cartLengthAndCost()).count === 0) {
-      alert('Please choose products to order', false);
-      return;
-    }
-    (function () {
-      let carts = localStorage.getItem('cart');
-      console.log(carts);
-      $.POST('sendmail.php', { 'carts': carts }, function (alData) {
-        alert('Thanks');
-      })
-      
-    })();
-    const form = this.cartContainer.querySelector('.cart-form__body');
-    if (form.checkValidity()) {
-      ev.preventDefault();
-      let formData = new FormData(form)
-      formData.append()
-      await fetch('sendmail.php', {
-        method: 'POST',
-        body: formData
-      })
-        .then(response => {
-          if (response.status === 200) {
-            return response.text();
-          } else {
-            throw new Error('Cannot send form');
-          }
-        })
-        .then(responseText => {
-          form.reset();
-          this.cart = {};
-          this.saveCart();
-          this.updateBadge();
-          this.renderCart();
-          alert('Thank you! For You Order. ' + responseText);
-          this.cartContainer.querySelector('.popup-close').click();
-        })
-        .catch(error => alert(`There is an error: ${error}`, false));
-    } else {
-      alert('Please fill form correctly', false);
-    }
-  }
+  // async order(ev) {
+  //   if ((await this.cartLengthAndCost()).count === 0) {
+  //     alert('Please choose products to order', false);
+  //     return;
+  //   }
+  //   const form = this.cartContainer.querySelector('.cart-form__body');
+  //   if (form.checkValidity()) {
+  //     ev.preventDefault();
+  //     await fetch('sendmail.php', {
+  //       method: 'POST',
+  //       body: new FormData(form)
+  //     })
+  //       .then(response => {
+  //         if (response.status === 200) {
+  //           return response.text();
+  //         } else {
+  //           throw new Error('Cannot send form');
+  //         }
+  //       })
+  //       .then(responseText => {
+  //         form.reset();
+  //         this.cart = {};
+  //         this.saveCart();
+  //         this.updateBadge();
+  //         this.renderCart();
+  //         alert('Thank you! For You Order. ' + responseText);
+  //         this.cartContainer.querySelector('.popup-close').click();
+  //       })
+  //       .catch(error => alert(`There is an error: ${error}`, false));
+  //   } else {
+  //     alert('Please fill form correctly', false);
+  //   }
+  // }
 }
