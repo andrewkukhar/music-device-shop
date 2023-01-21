@@ -7,4 +7,3 @@
       navigationsBody.classList.toggle("active");
     });
   })();
-  
